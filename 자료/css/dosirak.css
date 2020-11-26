@@ -1,0 +1,52 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;700&display=swap');
+
+/*                        메뉴                               */
+
+*{margin: 0; padding:0;}
+li{list-style: none;}
+img{border:0;}
+*{font-family: 'Noto Sans KR';
+	font-style: normal;
+	font-weight: 300;}
+
+
+	/*----                    메인 이미지                ---------*/
+
+	
+	.main_bg{
+		position: fixed;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+		opacity: 0;
+		/*
+		background-attachment: fixed;
+		background-position: center center;
+		background-repeat: none;
+		background-size: cover;
+		*/
+		background-attachment: fixed fixed;
+		background-position: top left, center center;
+		background-repeat: repeat, none;
+		background-size: auto, cover;
+		-webkit-transition: opacity 0.5s ease-out;
+		transition: opacity 0.5s ease-out;
+	}
+	.main_bg.active {
+		opacity: 1;
+	}
+	.main_bg#area1 {
+		/* background-image: url(../images/bg1.jpg); */
+		background-image: url(/img/overlay.png), url(/img/main2.png);
+	}
+	.main_bg#area2 {
+		/* background-image: url(../images/bg2.jpg); */
+		background-image: url(/img/overlay.png),url(/img/main3.png);
+	}
+	.main_bg#area3 {
+		/* background-image: url(../images/bg3.jpg); */
+		background-image:  url(/img/overlay.png), url(/img/main4.png);
+	}

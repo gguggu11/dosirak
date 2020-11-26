@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+</head>
+<script>
+   function addAnswer(obj,text){
+       var parent = obj.parentElement;
+       var newP = document.createElement("p");
+       newP.onclick = function(){
+           var par = this.parentElement;
+           par.removeChild(this);
+       };
+       newP.innerHTML = text;
+       parent.appendChild(newP);
+   }
+</script>
+</head>
+<body>
+<h2>퀴즈</h2>
+<div>
+    <p>[문제1] 1</p>
+    <button onclick="addAnswer(this,'1')">답보기</button>
+</div>
+<div>
+    <p>[문제1] 1</p>
+    <button onclick="addAnswer(this,'1')">답보기</button>
+</div>
+<div>
+    <p>[문제1] 1</p>
+    <button onclick="addAnswer(this,'1')">답보기</button>
+</div>
+</body>
+</html>

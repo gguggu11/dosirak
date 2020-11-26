@@ -1,0 +1,26 @@
+<HTML>
+<HEAD>
+<SCRIPT LANGUAGE="JavaScript"> 
+<!--
+function go(x)
+{
+  if(x.selectedIndex !=0){
+  window.open(x.options[x.selectedIndex].value);
+  }
+}
+//-->
+</SCRIPT>
+</HEAD>
+<BODY>
+<FORM>
+<SELECT SIZE="1" NAME="link">
+<OPTION>추천 사이트
+<OPTION VALUE="http://www.webreference.com">Webreference
+<OPTION VALUE="http://www.webreview.com">Webreview
+<OPTION VALUE="http://www.dynamicdrive.com">Dynamicdrive
+</SELECT>
+<INPUT TYPE="button" onclick="go(this.form.link)" VALUE="Go!">
+</FORM>
+</BODY>
+</HTML>
+

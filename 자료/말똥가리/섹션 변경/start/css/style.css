@@ -1,0 +1,10 @@
+﻿@charset "UTF-8";
+
+body {
+	margin: 0;
+	padding: 0;
+	overflow-y: hidden;
+	font-family: "Open Sans", sans-serif;
+	font-size: 1em;
+	color: #555;
+}

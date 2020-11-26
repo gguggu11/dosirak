@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@500&display=swap" rel="stylesheet">
+    <title>finalexampractice</title>
+</head>
+
+<style>
+*{margin: 0; padding:0;}
+li{list-style: none;}
+img{border:0;}
+*{font-family: 'Noto Serif KR', serif;}
+
+</style>
+
+<style>
+    #main_header
+    {
+        width: 960px;
+        margin: 0 auto;
+
+        height: 160px;
+        position: relative;
+    }
+    #main_header>#title
+    {
+        position: absolute;
+        left: 20px; top:30px;
+        color:royalblue;
+    }
+    #main_header > #main_menu
+    {
+        position:absolute;
+        right:0; top:30px;
+    }
+    #main_header > #sub_menu
+    {
+        position:absolute;
+        right:0; bottom:10px;
+    }
+    #main_menu>ul
+    {
+        overflow: hidden;
+    }
+    #main_menu>ul>li
+    {
+        float:left;
+    }
+    #main_menu>ul>li>a
+    {
+        display:block;
+        padding: 2px 10px;
+        border: 1px solid royalblue;
+    }
+    #main_menu>ul>li>a:hover
+    {
+        background: royalblue;
+        color:whitesmoke;
+    }
+    #main_menu>ul>li:first-child>a
+    {
+        border-radius: 10px 0 0 10px;
+    }
+    #main_menu>ul>li:last-child>a
+    {
+        border-radius: 0 10px 10px 0;
+    }
+    #sub_menu>ul
+    {
+        overflow: hidden;
+    }
+    #sub_menu>ul>li
+    {
+        float:left;
+    }
+    #sub_menu>ul>li>a
+    {
+        display:block;
+        padding: 2px 10px;
+        border: 1px solid royalblue;
+    }
+    #sub_menu>ul>li>a:hover
+    {
+        background: royalblue;
+        color:whitesmoke;
+    }
+    #sub_menu>ul>li:first-child>a
+    {
+        border-radius: 10px 0 0 10px;
+    }
+    #sub_menu>ul>li:last-child>a
+    {
+        border-radius: 0 10px 10px 0;
+    }
+</style>
+
+<style>
+    #content
+    {
+        width: 960px;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+    #content>#main_section
+    {
+        width: 960px;
+        float:left;
+    }
+    #main_section>article.main_article
+    {
+        border:1px solid royalblue;
+        padding:20px;
+        margin-top: 10px;
+        margin-bottom:10px;
+    }
+    #content>#sub_article
+    {
+        width:200px;
+        float:right;
+    }
+</style>
+
+<style>
+    input:nth-of-type(1){display: none;}
+    input:nth-of-type(1)~ div:nth-of-type(1){display: none;}
+    input:nth-of-type(1):checked~div:nth-of-type(1){display: block;}
+
+    input:nth-of-type(2){display: none;}
+    input:nth-of-type(2)~ div:nth-of-type(2){display: none;}
+    input:nth-of-type(2):checked~div:nth-of-type(2){display: block;}
+
+    input:nth-of-type(3){display: none;}
+    input:nth-of-type(3)~ div:nth-of-type(3){display: none;}
+    input:nth-of-type(3):checked~div:nth-of-type(3){display: block;}
+
+    section.buttons
+        {
+            overflow:hidden;
+        }
+        section.buttons>label
+        {
+            display: block;
+            float:left;
+
+            width:100px; height:30px;
+            text-align: center;
+
+            box-sizing: border-box;
+            border:1px solid whitesmoke;
+
+            background-color: whitesmoke;
+            color: royalblue;
+        }
+        input:nth-of-type(1):checked~section.buttons > label:nth-of-type(1)
+       {
+           background-color: royalblue;
+            color: whitesmoke;
+        }
+        input:nth-of-type(2):checked~section.buttons > label:nth-of-type(2)
+        {
+            background-color: royalblue;
+            color: whitesmoke;
+        }
+        input:nth-of-type(3):checked~section.buttons > label:nth-of-type(3)
+        {
+            background-color: royalblue;
+            color: whitesmoke;
+        }
+</style>
+
+<style>
+    .item
+    {
+        overflow:hidden;
+        padding:10px;
+        border: 1px solid royalblue;
+    }
+    .thumbnail
+    {
+        float:left;
+    }
+    .description
+    {
+        float:right;
+        margin-right:5px;
+    }
+    .description>strong
+    {
+        display:block;
+        width:100px;
+        white-space: nowrap;
+        overflow:hidden;
+        text-overflow: ellipsis;
+    }
+</style>
+
+<style>
+    #footer
+    {
+        overflow: hidden;
+        padding:10px;
+        width:960px;
+        margin:0 auto;
+    }
+    #footer>ul>li
+    {
+        float: right;
+        padding: 2px 10px;
+    }
+</style>
+
+<body>
+
+<header id = "main_header">
+    <div id = "title">
+        <ul>
+            <li><a href="#">지역/언어 선택</a></li>
+        </ul>
+        <h1>Blue Air</h1>
+    </div>
+
+    <nav id = "main_menu">
+        <ul>
+            <li><a href="#">로그인</a></li>
+            <li><a href="#">회원가입</a></li>
+            <li><a href="#">마이페이지</a></li>
+            <li><a href="#">상담바로가기</a></li>
+        </ul>
+    </nav>
+
+    <nav id = "sub_menu">
+        <ul>
+            <li><a href="#">항공권 예매</a></li>
+            <li><a href="#">마일리지</a></li>
+            <li><a href="#">서비스 안내</a></li>
+            <li><a href="#">프로모션/여행상품</a></li>
+        </ul>
+    </nav>
+
+</header>
+
+<div id = "content">
+    
+    <section id = "main_section">
+
+    <article class = "main_article">
+    <img src="https://singularityhub.com/wp-content/uploads/2018/12/airplane-flying-above-clouds_shutterstock_553131187-1068x601.jpg" width="915" height="450">
+    <p><br><h2>안심하고 여행하세요.</h2><br>Blue Air은 고객 여러분들과 다시 가까워지는 그 날을 위해 탑승수속, 기내, 도착에 이르는 모든 과정에서의 방역활동을 통한 안전 확보에 만전을 기하고 있습니다. Blue Air의 ‘Care First’는 고객 여러분들의 안전한 비행의 동반자가 되기 위한 노력의 일환입니다. 출발 전부터 기내에 탑승하기까지의 전 과정을 통해 Blue Air이 고객 여러분들을 위해 준비한 안전/방역 활동들을 하나하나 확인해 보시기 바랍니다.</p>
+    </article>
+
+    <article class = "sub_article">
+        <input id="first" type="radio" name="tab" checked="checked"/>
+        <input id="second" type="radio" name="tab"/>
+        <input id="third" type="radio" name="tab"/>
+        
+        <section class="buttons">
+            <label for="first">항공권 예매</label>
+            <label for="second">호텔 예매</label>
+            <label for="third">렌터카 예매</label>
+        </section>
+
+        <div class="tab_item">
+            <ul>
+                <li class="item">
+                    <a href = "#">
+                        <div class = "thumbnail">
+                            <img src="http://placehold.it/45x45"
+                        </div>
+                        <div class="description">
+                            <strong>항공권 예매</strong>
+                            <p>일반 예매</p>
+                            <p>특가 예매</p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="tab_item">
+            <ul>
+                <li class="item">
+                    <a href = "#">
+                        <div class = "thumbnail">
+                            <img src="http://placehold.it/45x45"
+                        </div>
+                        <div class="description">
+                            <strong>호텔 예매</strong>
+                            <p>목적지</p>
+                            <p>객실/명수</p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="tab_item">
+            <ul>
+                <li class="item">
+                    <a href = "#">
+                        <div class = "thumbnail">
+                            <img src="http://placehold.it/45x45"
+                        </div>
+                        <div class="description">
+                            <strong>렌터카 예매</strong>
+                            <p>대여 도시</p>
+                            <p>대여일</p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+    </article>
+
+    <article class = "main_article">
+    <ul>
+        <img src="https://www.womennews.co.kr/news/photo/201904/188806_303531_3346.jpg" width="915" height="450">
+        <li><a href="#"><br>이벤트</a></li>   
+
+    </ul>
+    </article>
+
+    <article class = "main_article">
+        <ul>
+            <img src="https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Ft1.daumcdn.net%2Fcfile%2Ftistory%2F99A24A4C5C06710409" width="915" height="450">
+            <li><a href="#"><br>특가 항공권</a></li>   
+            <br><h2>서울/인천 ↔ 파리 1,046,300 부터</h2><br>
+            <li><p>상기 금액은 유류할증료 및 세금을 포함한 성인 1인 왕복 운임이며, 구매일과 환율에 따라 달라질 수 있습니다. 일부 해외지역 출발 운임은 유류할증료 대신 항공사 부과금액을 포함하고 있습니다. 상기 운임에 해당하는 예약 클래스에 잔여 좌석이 있을 때만 구매 가능하므로, 선택 날짜에 따라 구매 가능 여부가 달라질 수 있습니다. 환불 및 예약 변경에 관련된 규정은 예약 단계 내 상세 운임규정에서 확인하실 수 있습니다.</p></li>
+        </ul>
+        </article>
+
+    </section>
+
+</div>
+
+<div id="footer">
+    <ul>
+    <li><a href="#">회사 소개</a></li>
+    <li><a href="#">약관 및 규정</a></li>
+    <li><a href="#">기타 안내</a></li>
+    <li><a href="#">고객 지원</a></li>
+    <li><a href="#">SNS</a></li>
+    </ul>
+</div>
+
+</body>
+
+</html>
